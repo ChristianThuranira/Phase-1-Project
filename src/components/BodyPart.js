@@ -5,7 +5,6 @@ import Icon from '../assets/icons/gym.png';
 const BodyPart = ({ item, setBodyPart, bodyPart }) => {
   const isSelected = bodyPart === item;
 
-  // Common styles
   const cardStyles = {
     background: '#fff',
     borderBottomLeftRadius: '20px',
@@ -18,11 +17,11 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
 
   return (
     <Stack
-      type="button"
+      component="button" // Changed 'type' to 'component' for rendering as a button
       alignItems="center"
       justifyContent="center"
       className="bodyPart-card"
-      sx={cardStyles} // Using the defined styles
+      sx={cardStyles}
       onClick={() => {
         setBodyPart(item);
         window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' });
@@ -36,4 +35,4 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
   );
 };
 
-export default BodyPart;
+export default React.memo(BodyPart); // Using memo to optimize re-renders
