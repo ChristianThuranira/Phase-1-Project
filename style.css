@@ -1,45 +1,33 @@
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    background-color: #20252b; /* Black background */
+    color: white; /* White text */
 }
 
-header {
-    padding: 50px 0;
-    background-color: #343a40;
-    color: white;
+.navbar, footer {
+    background-color: #000; /* Black background for navbar and footer */
 }
 
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+.btn-primary, .btn-success {
+    background-color: #28a745; /* Green color for buttons */
+    border-color: #28a745;
 }
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #110505; /* White background for cards */
+    color: #000; /* Black text */
+    border-color: #28a745; /* Green border */
 }
 
-.card-body {
+h1, h2, p {
+    color: rgb(247, 247, 247);
+}
+
+.container, form {
+    background-color: #c27780; /* White background for form containers */
+    color: black;
+    border-radius: 10px;
     padding: 20px;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px;
-    text-align: center;
 }
