@@ -1,4 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Fetch exercise data from Wger API
+  fetch('https://wger.de/api/v2/exercise/?language=2', {
+      headers: { 'Authorization': 'Token 9bd79a61f9f890b6135cdf4f7412a3ce2554d7d9' }
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Display exercises from Wger API
+      const exerciseContainer = document.getElementById('exercise-list');
+      data.results.forEach(exercise => {
+          exerciseContainer.innerHTML += `
+              <li>${exercise.name}</li>
+          `;
+      });
+  });
+
+  // Fetch exercise calories burned from Nutritionix API
+  const nutritionixFetch = async () => {
+      try {
+          const response = await fetch('https://trackapi.nutritionix.com/v2/natural/exercise', {
+              method: 'POST',
+              headers: {
+                  'x-app-id': '9b26862e',  // Your App ID
+                  'x-app-key': 'd0577214a29ff67cecc0544557a742e7',  // Your API Key
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ query: 'run 3 miles' })  // Example query
+          });
+
+          if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+          }
+
+          const data = await response.json();  // Wait for the response to be parsed as JSON
+          console.log(data);  // Log the data received from the API
+
+          // Show calories burned
+          const caloriesContainer = document.getElementById('calories-burned');
+          caloriesContainer.innerHTML = `Calories burned: ${data.exercises[0].nf_calories}`;
+      } catch (error) {
+          console.error('Error:', error);  // Log any errors
+      }
+  };
+
+  nutritionixFetch();  // Call the function to fetch calories burned
+
   // Handle Signup Form
   const signupForm = document.getElementById('signup-form');
   if (signupForm) {

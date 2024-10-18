@@ -6,9 +6,27 @@ body {
     color: white; /* White text */
 }
 
-.navbar, footer {
-    background-color: #000; /* Black background for navbar and footer */
-}
+.navbar, footer 
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    
+    .content {
+        min-height: calc(100vh - 60px); /* Adjust this value based on your footer height */
+    }
+    
+    footer {
+        height: 60px; /* Set this to your footer height */
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: #343a40; /* Dark background color */
+        color: white; /* Text color */
+        text-align: center;
+        padding: 1rem; /* Adjust padding as needed */
+    }
+    
 
 .btn-primary, .btn-success {
     background-color: #28a745; /* Green color for buttons */
