@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
       { day: 'Day 1', workout: 'Full Body Workout', youtubeVideo: 'http://localhost:3000/workouts/full_body_workout' },
       { day: 'Day 2', workout: 'Upper Body Strength', youtubeVideo: 'http://localhost:3000/workouts/upper_body_strength' },
       { day: 'Day 3', workout: 'Cardio & Core', youtubeVideo: 'http://localhost:3000/workouts/cardio_and_core' },
-      { day: 'Day 4', workout: 'Lower Body Strength', youtubeVideo: 'http://localhost:3000/workouts/lower_body_strength' },
-      { day: 'Day 5', workout: 'Mobility and Stretching', youtubeVideo: 'http://localhost:3000/workouts/mobility_and_stretching' },
-      { day: 'Day 6', workout: 'Cardio Blast', youtubeVideo: 'http://localhost:3000/workouts/cardio_blast' },
-      { day: 'Day 7', workout: 'Rest or Active Recovery', youtubeVideo: 'http://localhost:3000/workouts/rest_or_active_recovery' },
+      { day: 'Day 4', workout: 'Lower Body Strength', youtubeVideo: 'http://localhost:3000/workouts/full_body_workout' },
+      { day: 'Day 5', workout: 'Mobility and Stretching', youtubeVideo: 'http://localhost:3000/workouts/full_body_workout' },
+      { day: 'Day 6', workout: 'Cardio Blast', youtubeVideo: 'http://localhost:3000/workouts/full_body_workout' },
+      { day: 'Day 7', workout: 'Rest or Active Recovery', youtubeVideo: 'http://localhost:3000/workouts/full_body_workout' },
   ];
 
   // Render 7-Day Workout Plan
