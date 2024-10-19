@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const email = document.getElementById('signup-email').value;
           const password = document.getElementById('signup-password').value;
           localStorage.setItem('user', JSON.stringify({ name, email, password }));
-          alert('Signup successful! Redirecting to login...');
+          alert('Signup successful! ...');
           window.location.href = 'login.html';
       });
   }
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const user = JSON.parse(localStorage.getItem('user'));
 
           if (user && user.email === email && user.password === password) {
-              alert('Login successful! Redirecting to planner...');
+              alert('Login successful!...');
               window.location.href = 'planner.html'; // Redirect to the planner page
           } else {
               alert('Invalid credentials!');
@@ -92,13 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Workout Plan Data
   const workoutSchedule = [
-      { day: 'Day 1', workout: 'Full Body Workout', youtubeVideo: 'https://www.youtube.com/embed/xyz' },
-      { day: 'Day 2', workout: 'Upper Body Strength', youtubeVideo: 'https://www.youtube.com/embed/xyz' },
-      { day: 'Day 3', workout: 'Cardio & Core', youtubeVideo: 'https://www.youtube.com/embed/xyz' },
-      { day: 'Day 4', workout: 'Lower Body Strength', youtubeVideo: 'https://www.youtube.com/embed/xyz' },
-      { day: 'Day 5', workout: 'Mobility and Stretching', youtubeVideo: 'https://www.youtube.com/embed/xyz' },
-      { day: 'Day 6', workout: 'Cardio Blast', youtubeVideo: 'https://www.youtube.com/embed/xyz' },
-      { day: 'Day 7', workout: 'Rest or Active Recovery', youtubeVideo: 'https://www.youtube.com/embed/xyz' },
+      { day: 'Day 1', workout: 'Full Body Workout', youtubeVideo: 'http://localhost:3000/workouts/full_body_workout' },
+      { day: 'Day 2', workout: 'Upper Body Strength', youtubeVideo: 'http://localhost:3000/workouts/upper_body_strength' },
+      { day: 'Day 3', workout: 'Cardio & Core', youtubeVideo: 'http://localhost:3000/workouts/cardio_and_core' },
+      { day: 'Day 4', workout: 'Lower Body Strength', youtubeVideo: 'http://localhost:3000/workouts/lower_body_strength' },
+      { day: 'Day 5', workout: 'Mobility and Stretching', youtubeVideo: 'http://localhost:3000/workouts/mobility_and_stretching' },
+      { day: 'Day 6', workout: 'Cardio Blast', youtubeVideo: 'http://localhost:3000/workouts/cardio_blast' },
+      { day: 'Day 7', workout: 'Rest or Active Recovery', youtubeVideo: 'http://localhost:3000/workouts/rest_or_active_recovery' },
   ];
 
   // Render 7-Day Workout Plan

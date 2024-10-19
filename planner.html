@@ -51,6 +51,17 @@
             <!-- Dynamic Workout Schedule will be added here -->
         </div>
 
+        <!-- Exercise Query for Calories -->
+        <h2 class="text-center mt-5">Calories Burned</h2>
+        <form id="exercise-form" class="mx-auto" style="max-width: 500px;">
+            <div class="mb-3">
+                <label for="exercise-input" class="form-label">Enter your exercise</label>
+                <input type="text" id="exercise-input" class="form-control" placeholder="E.g., run 3 miles" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Calculate Calories</button>
+        </form>
+        <div id="calories-burned" class="mt-3 text-center"></div>
+
         <!-- Daily Progress Section -->
         <h2 class="text-center mt-5">Daily Progress</h2>
         <form id="progress-form" class="mx-auto" style="max-width: 500px;">
